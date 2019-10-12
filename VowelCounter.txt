@@ -1,0 +1,24 @@
+DECLARE Vowel : STRING
+DECLARE TotalV : INTEGER
+DECLARE Count : INTEGER
+DECLARE Str1 : STRING
+DECLARE nextChar : CHAR
+
+Vowel = "AEIOU"
+Str1 = ""
+TotalV = 0
+Count = 0
+nextChar = ''
+OUTPUT "Enter a string: "
+INPUT Str1 
+
+Str1 = UPPER(Str1)
+
+FOR Count = 1 to LENGTH(Str1)
+    nextChar = MID(Str1, Count, 1)
+IF LOCATE(Vowel, nextChar) <> 0
+   THEN
+     TotalV = TotalV + 1
+ENDIF
+ENDFOR
+OUTPUT "The total number of vowels = " & TotalV
